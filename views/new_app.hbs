@@ -1,0 +1,14 @@
+<h1>Upload New App</h1>
+<form action="/new" method="POST" enctype="multipart/form-data">
+  <label for="name">App Name:</label>
+  <input type="text" name="name" required />
+  <label for="description">Short Description:</label>
+  <input type="text" name="description" required />
+  <label for="details">Detailed Description:</label>
+  <textarea name="details"></textarea>
+  <label for="apk">APK File:</label>
+  <input type="file" name="apk" required />
+  <label for="screenshot">Screenshot:</label>
+  <input type="file" name="screenshot" />
+  <button type="submit">Upload</button>
+</form>

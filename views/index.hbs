@@ -1,0 +1,16 @@
+<h1>App Store</h1>
+<ul>
+  {{#each apps}}
+    <li>
+      <a href="/app/{{this._id}}">{{this.name}}</a>
+      <p>{{this.description}}</p>
+      {{#if this.screenshot}}
+        <img
+          src="/{{this.screenshot}}"
+          alt="{{this.name}}"
+          style="width:200px;"
+        />
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>

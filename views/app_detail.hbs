@@ -1,0 +1,11 @@
+<h1>{{app.name}}</h1>
+<p>{{app.details}}</p>
+{{#if app.screenshot}}
+  <img src="/{{app.screenshot}}" alt="{{app.name}}" style="width:400px;">
+{{/if}}
+
+{{#if user}}
+  <a href="/{{app.apk}}" download>Download APK</a>
+{{else}}
+  <p><a href="/login">Login</a> to download this app.</p>
+{{/if}}

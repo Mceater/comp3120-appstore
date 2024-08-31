@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Mobile App Store</title>
+  </head>
+  <body>
+    <header>
+      {{#if user}}
+        <p>Welcome,
+          {{user}}!
+          <a href="/my">My Apps</a>
+          |
+          <form action="/logout" method="POST" style="display:inline;"><button
+              type="submit"
+            >Logout</button></form></p>
+      {{else}}
+        <a href="/login">Login</a>
+      {{/if}}
+    </header>
+
+    {{{body}}}
+
+  </body>
+</html>

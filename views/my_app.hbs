@@ -1,0 +1,16 @@
+<h1>My Apps</h1>
+<a href="/new">Upload New App</a>
+<ul>
+  {{#each apps}}
+    <li>
+      <a href="/app/{{this._id}}">{{this.name}}</a>
+      <form
+        action="/app/{{this._id}}/delete"
+        method="POST"
+        style="display:inline;"
+      >
+        <button type="submit">Delete</button>
+      </form>
+    </li>
+  {{/each}}
+</ul>
